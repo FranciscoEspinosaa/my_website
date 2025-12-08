@@ -1,0 +1,141 @@
+/*          INDEX          */
+
+
+/* Color Palette */
+
+/* colors {
+    Classic Dark Blue
+    color: #0a1828;
+
+    Turquoise
+    color: #178582;
+
+    Gold
+    color: #bfa181;
+
+    Blue
+    color: #1249d6;
+} */
+
+
+/* Font Styles */
+
+/* .urbanist-<uniquifier> {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+.inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
+/* HTML */
+
+html {
+    background-color: #1249d6;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.name a{
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_list {
+    display: flex;
+    gap: 35px;
+}
+
+.menu_option {
+    text-decoration: none;
+    font-size: x-large;
+    color: black;
+}
+
+.menu_option:hover {
+    /* text-decoration: underline; */
+    /* text-underline-offset: 8px; */
+    color: #1249d6;
+    transition: 3ms;
+}
+
+
+/* CONTACT */
+
+.contact {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.contact_name {
+    font-size: 35px;
+    text-align: center;
+}
+
+.contact_map p{
+    text-align: center;
+    font-size: x-large;
+
+}
+
+.contact_connect {
+    text-align: center;
+    font-size: x-large;
+}
+
+.contact_icons {
+    display: flex;
+    gap: 50px;
+}
+
+.contact_icon:hover {
+    transition: stroke 0.3 ease;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+/* FOOTER */
+
+footer {
+    font-size: x-large;
+    color: white;
+    background-color: #1249d6;
+    padding: 30px;
+    padding-top: 100px;
+    /* text-align: center; */
+}
