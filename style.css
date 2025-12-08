@@ -1,6 +1,3 @@
-/*          INDEX          */
-
-
 /* Color Palette */
 
 /* colors {
@@ -36,6 +33,9 @@
 } */
 
 
+
+
+
 /* HTML */
 
 html {
@@ -50,19 +50,56 @@ html {
     box-sizing: inherit;
 }
 
+
+
+
+
+/* HEADER */
+
 header {
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
 }
 
+.video_header {
+    /* position: relative; */
+    /* overflow: hidden; */
+    transition: background 0.3s ease;
+}
+
+/* VIDEO DE FONDO */
+.video_bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* lo manda al fondo total */
+}
+
+.video_header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); /* ajusta la oscuridad */
+    z-index: -1; /* detrás del contenido, encima del video */
+}
+
 .name a{
     text-decoration: none;
     font-size: 40px;
-    color: black;
+    color: white;
     font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.name a:hover{
+    color: lightgray;
 }
 
 .menu {
@@ -79,18 +116,68 @@ header {
 .menu_option {
     text-decoration: none;
     font-size: x-large;
-    color: black;
+    color: white;
+    position: relative;
+    display: inline-block;
+
+    /* subrayado falso usando background */
+    padding-bottom: 5px;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;     /* empieza invisible */
+    background-repeat: no-repeat;
+    background-position: center bottom; /* comienza desde el centro */
+    transition: 
+        color 0.3s ease,
+        background-size 0.3s ease;
 }
 
 .menu_option:hover {
     /* text-decoration: underline; */
     /* text-underline-offset: 8px; */
-    color: #1249d6;
-    transition: 3ms;
+    /* color: #1249d6; */
+    /* transition: 3ms; */
+    background-size: 100% 2px;   /* crece hacia afuera */
+    color: lightgray;
 }
 
 
-/* CONTACT */
+
+
+
+/* SECTION: WHOIAM */
+
+.whoiam {
+    background-color: white;
+}
+
+.whoiam_description {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 150px;
+}
+
+.whoiam_description p {
+    width: 33%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    font-size: xx-large;
+}
+
+.whoiam_description img {
+    width: 20%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    margin-right: 300px;
+    outline: 5px solid #000080;
+    outline-offset: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+/* SECTION: CONTACT */
 
 .contact {
     color: white;
@@ -120,12 +207,30 @@ header {
 .contact_icons {
     display: flex;
     gap: 50px;
+    /* position: relative; */
+    /* display: block; */
+}
+
+.contact_icon {
+    display: inline-block;           /* importante para que el background solo abarque el icono */
+    /* padding-bottom: 3px;             separa la línea del elemento */
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;   /* centrado horizontal, abajo verticalmente */
+    background-size: 0% 2px;         /* comienza invisible */
+    transition: 
+        color 0.3s ease,
+        background-size 0.3s ease; /* velocidad / suavidad */
+    cursor: pointer;
+    color: white;
 }
 
 .contact_icon:hover {
-    transition: stroke 0.3 ease;
-    background-color: white;
-    border-radius: 50%;
+    /* transition: stroke 0.3 ease; */
+    /* background-color: white; */
+    /* border-radius: 50%; */
+    background-size: 100% 2px;   /* crece hacia afuera */
+    color: lightgray;
 }
 
 
@@ -134,7 +239,7 @@ header {
 footer {
     font-size: x-large;
     color: white;
-    background-color: #1249d6;
+    /* background-color: #1249d6; */
     padding: 30px;
     padding-top: 100px;
     /* text-align: center; */
