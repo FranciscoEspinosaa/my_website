@@ -1,120 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/style.css" rel="stylesheet">
-    <title>Inicio | Francisco Espinosa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Francisco Espinosa</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Portafolio profesional de Francisco Espinosa. Soporte técnico, redes, Azure y proyectos IT." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Urbanist:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="video_header">
-        <video autoplay muted loop playsinline class="video_bg">
-            <source src="/videos/header.mp4" type="video/mp4">
-        </video>
-        <div class="name"> 
-            <a href="index.html">
-                <p>Francisco Espinosa</p>
-            </a>
-        </div> 
-        <div class="menu">
-            <ul class="menu_list">
-                <a class="menu_option" href="about.html">Acerca de mi</a>
-                <a class="menu_option" href="exp.html">Experiencia</a>
-                <a class="menu_option" href="projects.html">Proyectos</a>
-                <a class="menu_option" href="certs.html">Certificaciones</a>
-                <a class="menu_option"></a>
-            </ul>
+
+  <!-- HEADER / HERO -->
+  <header class="hero">
+    <!-- Video background (reemplaza src cuando quieras) -->
+    <video class="hero__video" autoplay muted loop playsinline>
+      <source src="/videos/header.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Overlay -->
+    <div class="hero__overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">Francisco Espinosa</a>
+
+      <button class="nav__toggle" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <ul class="nav__menu">
+        <li><a href="about.html">Acerca de mí</a></li>
+        <li><a href="exp.html">Experiencia</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="certs.html">Certificaciones</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero content -->
+    <div class="hero__content container">
+      <h1>IT Support · Networking · Azure</h1>
+      <p>
+        Experiencia en soporte técnico, infraestructura física y en la nube.
+        Construyendo soluciones IT eficientes y escalables.
+      </p>
+    </div>
+  </header>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="about container">
+    <div class="about__text">
+      <h2>¿Quién soy?</h2>
+      <p>
+        Me identifico con el soporte técnico remoto y en sitio. He trabajado en
+        sectores financieros y de manufactura, adquiriendo experiencia en
+        infraestructura física, redes y servicios en la nube.
+      </p>
+    </div>
+
+    <div class="about__image">
+      <img src="/images/photo.png" alt="Foto de Francisco Espinosa" />
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact container">
+    <h2>Contacto</h2>
+
+    <div class="contact__grid">
+      <div class="contact__item">
+        <h3>Ubicación</h3>
+        <iframe
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.31916105196564!2d-100.43726654891846!3d25.771789933772688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866290a62769f795%3A0x3fb2f69be05f8113!2sMontes%20Navarra%20309%2C%2066024%20Mitras%20Poniente%2C%20N.L.!5e0!3m2!1sen!2smx!4v1765153890137!5m2!1sen!2smx">
+        </iframe>
+      </div>
+
+      <div class="contact__item">
+        <h3>Conecta conmigo</h3>
+        <div class="contact__icons">
+          <a href="https://www.linkedin.com/in/francisco-espinosaa/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+          <a href="mailto:francisco.espinosaa@outlook.com" aria-label="Email">Email</a>
+          <a href="https://wa.me/528115197693" target="_blank" aria-label="WhatsApp">WhatsApp</a>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <section class="whoiam">
-        <div class="whoiam_description">
-            <p>Me identifico con el soporte tecnico via remoto y en sitio, he tenido la oportunidad de trabajar en sectores financieros y de manufactura. 
-                A lo largo de mi carrera profesional he podido aprender sobre la infraestructura tanto fisica como en la nube en temas de IT.</p>
-            <img src="/images/photo.png" alt="Francisco Espinosa">
-        </div>
-    </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 · Desarrollado por Francisco Espinosa</p>
+  </footer>
 
-    <section class="skills">
-
-    </section>
-
-    <section class="contact">
-        <div class="contact_name">
-            <a>
-                <p>Francisco Espinosa</p>
-                <!-- <p>Ingeniero Administrador de Sistemas</p> -->
-            </a>
-        </div>
-        <div class="contact_map">
-            <p>Ubicación</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.31916105196564!2d-100.43726654891846!3d25.771789933772688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866290a62769f795%3A0x3fb2f69be05f8113!2sMontes%20Navarra%20309%2C%2066024%20Mitras%20Poniente%2C%20N.L.!5e0!3m2!1sen!2smx!4v1765153890137!5m2!1sen!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="contact_connect">
-            <p>Conecta conmigo</p>
-            <div class="contact_icons">
-                <a class="contact_icon" href="https://www.linkedin.com/in/francisco-espinosaa/" target="_blank">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="100"
-                      height="100"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="1.25"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
-                        <path d="M8 11l0 5" />
-                        <path d="M8 8l0 .01" />
-                        <path d="M12 16l0 -5" />
-                        <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-                    </svg>
-                </a>
-                <a class="contact_icon" href="mailto:francisco.espinosaa@outlook.com">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="100"
-                      height="100"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="1.25"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-                        <path d="M3 7l9 6l9 -6" />
-                    </svg>
-                </a>
-                <a class="contact_icon" href="https://wa.me/528115197693" target="_blank">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="100"
-                      height="100"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="#000"
-                      stroke-width="1.25"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-                        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section> 
-
-    <footer>
-    <p>© 2025 Desarrollado por Francisco Espinosa</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body> 
+  <script src="script.js"></script>
+</body>
 </html>
