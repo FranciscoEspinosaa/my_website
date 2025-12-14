@@ -27,19 +27,6 @@ contactIcons.forEach(icon => {
 });
 
 // =========================
-// CERRAR MENÚ AL HACER CLICK (MOBILE)
-// =========================
-const navLinks = document.querySelectorAll('.nav__menu a');
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    if (navMenu.classList.contains('active')) {
-      navMenu.classList.remove('active');
-    }
-  });
-});
-
-// =========================
 // SEARCH GLOBAL
 // =========================
 const searchBtn = document.getElementById("searchBtn");
@@ -83,6 +70,19 @@ searchInput.addEventListener("input", () => {
       });
 
       searchResults.appendChild(result);
+    }
+  });
+});
+
+// =========================
+// CERRAR MENÚ AL HACER CLICK (MOBILE)
+// =========================
+const navLinks = document.querySelectorAll('.nav__menu a');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
     }
   });
 });
