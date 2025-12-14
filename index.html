@@ -41,6 +41,11 @@
         <li><a href="exp.html">Experiencia</a></li>
         <li><a href="projects.html">Proyectos</a></li>
         <li><a href="certs.html">Certificaciones</a></li>
+        <li class="nav__search">
+          <button id="searchBtn" aria-label="Buscar">
+            🔍
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -130,7 +135,8 @@
       </svg>
     </a>
   </div>
-  
+</div>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -139,5 +145,18 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <div id="searchModal" class="search">
+    <div class="search__box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar en el sitio..."
+        autocomplete="off"
+      />
+      <div id="searchResults" class="search__results"></div>
+    </div>
+  </div>
+
 </body>
 </html>
