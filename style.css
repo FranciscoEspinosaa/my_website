@@ -27,6 +27,17 @@ html {
 
 body {
   line-height: 1.6;
+  /* background-color: var(--blue); */
+}
+
+.page {
+  /* background-color: var(--white); */
+  /* max-width: 1400px; */
+  /* margin: 2px; */
+  /* border-radius: 24px; */
+
+  /* box-shadow: 0 40px 120px rgba(0, 0, 0, 0.25); */
+  /* overflow: hidden; */
 }
 
 img {
@@ -123,6 +134,7 @@ img {
 /* =========================
    NAV SEARCH (underline like links)
    ========================= */
+
 .nav__search button {
   background: none;
   border: none;
@@ -207,35 +219,38 @@ img {
   width: 70%;
   margin-left: auto;
   border-radius: 50%;
-  /* outline: 5px solid var(--blue);  */
 }
 
 .about-highlight {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   gap: 80px;
+  padding: 40px 0;
+  width: 100%;
   /* margin: 120px 0; */
 }
 
 .about-highlight__wrapper {
-  margin-left: auto;
-  margin-right: 0;
+
+  /* margin-left: auto;
+  margin-right: 0; */
   /* display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 0; */
+  grid-template-columns: 1fr 2fr; */
+  gap: 0;
   /* align-items: stretch; */
-  /* position: relative; */
+  min-height: 520px;
 }
 
 .about-highlight__content {
   background: var(--blue);
   color: var(--white);
   padding: 80px;
-  /* border-radius: 12px; */
 
-  position: relative;
-  z-index: 2;
-}
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+} 
 
 .about-highlight__eyebrow {
   display: block;
@@ -274,10 +289,14 @@ img {
 }
 
 .about-highlight__image img {
+  position: relative;
+}
+
+.about-highlight__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 12px; */
+  display: block;
 }
 
 
@@ -387,7 +406,7 @@ img {
    FOOTER
    ========================= */
 .footer {
-  padding: 60px 0;
+  padding: 50px 0;
   text-align: center;
   font-size: 1.1rem;
 }
@@ -413,6 +432,10 @@ img {
   .about-highlight__wrapper {
       grid-template-columns: 1fr;
       gap: 40px;
+  }
+
+  .about-highlight__image {
+    height: 260px;
   }
 
   .about-highlight__content {
