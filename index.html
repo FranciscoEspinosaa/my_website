@@ -41,11 +41,21 @@
         <li><a href="exp.html">Experiencia</a></li>
         <li><a href="projects.html">Proyectos</a></li>
         <li><a href="certs.html">Certificaciones</a></li>
-        <li class="nav__search">
-          <button id="searchBtn" aria-label="Buscar">
-            🔍
-          </button>
-        </li>
+        <div class="nav__search">
+         <button id="searchBtn" aria-label="Buscar">
+           <svg class="nav__search-icon"
+             xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+             <circle cx="11" cy="11" r="8" />
+             <path d="m21 21-4.3-4.3" />
+           </svg>
+         </button>
+        </div>
       </ul>
     </nav>
 
@@ -62,18 +72,65 @@
   <!-- ABOUT PREVIEW -->
   <section class="about container">
     <div class="about__text">
-      <h2>¿Quién soy?</h2>
+      <h2>Profesional de IT con experiencia en soporte, redes y cloud</h2>
       <p>
-        Me identifico con el soporte técnico remoto y en sitio. He trabajado en
-        sectores financieros y de manufactura, adquiriendo experiencia en
-        infraestructura física, redes y servicios en la nube.
+        Profesional de Tecnologías de la Información con más de <strong>11 años de experiencia</strong>
+        brindando soporte técnico y administrando infraestructura IT en entornos
+        <strong>financieros y de manufactura</strong>.
+        He trabajado en organizaciones internacionales dando soporte remoto y en sitio,
+        participando en la operación diaria de redes, sistemas y servicios en la nube.
       </p>
+
     </div>
 
     <div class="about__image">
       <img src="/images/photo.png" alt="Foto de Francisco Espinosa" />
     </div>
   </section>
+
+  <section class="about-highlight">
+    <div class="about-highlight__wrapper container">
+      <div class="about-highlight__content">
+        <span class="about-highlight__eyebrow">Mi experiencia</span>
+    
+        <h3>
+          Más de una década manteniendo y optimizando
+          infraestructura IT en entornos críticos.
+        </h3>
+    
+        <p>
+          He trabajado en organizaciones de los sectores financiero y de manufactura,
+          participando directamente en la operación diaria de sistemas, redes y
+          servicios en la nube. Mi enfoque combina soporte técnico sólido,
+          administración de infraestructura y mejora continua.
+        </p>
+    
+        <ul class="about-highlight__stats">
+          <li>
+            <strong>+11 años</strong>
+            <span>Experiencia en IT</span>
+          </li>
+          <li>
+            <strong>Soporte</strong>
+            <span>Remoto y en sitio</span>
+          </li>
+          <li>
+            <strong>Cloud</strong>
+            <span>Azure · Entornos híbridos</span>
+          </li>
+          <li>
+            <strong>Infraestructura</strong>
+            <span>Redes · AD · O365</span>
+          </li>
+        </ul>
+      </div>
+    
+      <div class="about-highlight__image">
+        <!-- <img src="/images/infra.jpg" alt="Infraestructura IT y redes"> -->
+      </div>
+  </div>
+</section>
+
 
   <!-- CONTACT -->
   <section class="contact container">
@@ -90,52 +147,57 @@
       </div>
 
       <div class="contact__item">
-  <h3>Conecta conmigo</h3>
+        <div class="contact__item contact__item--center">
+          <h3>Conectemos</h3>
+            <p class="contact__subtitle">
+              Disponible para nuevas oportunidades profesionales
+            </p>
 
-  <div class="contact__icons">
-    <!-- LinkedIn -->
-    <a class="contact__icon"
-       href="https://www.linkedin.com/in/francisco-espinosaa/"
-       target="_blank"
-       aria-label="LinkedIn">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="1.25"
-           stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/>
-        <path d="M8 11v5"/>
-        <path d="M8 8v.01"/>
-        <path d="M12 16v-5"/>
-        <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
-      </svg>
-    </a>
-
-    <!-- Email -->
-    <a class="contact__icon"
-       href="mailto:francisco.espinosaa@outlook.com"
-       aria-label="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="1.25"
-           stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"/>
-        <path d="M3 7l9 6l9 -6"/>
-      </svg>
-    </a>
-
-    <!-- WhatsApp -->
-    <a class="contact__icon"
-       href="https://wa.me/528115197693"
-       target="_blank"
-       aria-label="WhatsApp">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-           fill="none" stroke="currentColor" stroke-width="1.25"
-           stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
-        <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1
-                 a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1"/>
-      </svg>
-    </a>
-  </div>
-</div>
+          <div class="contact__icons">
+            <!-- LinkedIn -->
+            <a class="contact__icon"
+               href="https://www.linkedin.com/in/francisco-espinosaa/"
+               target="_blank"
+               aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="1.25"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/>
+                <path d="M8 11v5"/>
+                <path d="M8 8v.01"/>
+                <path d="M12 16v-5"/>
+                <path d="M16 16v-3a2 2 0 0 0 -4 0"/>
+              </svg>
+            </a>
+  
+            <!-- Email -->
+            <a class="contact__icon"
+               href="mailto:francisco.espinosaa@outlook.com"
+               aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="1.25"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"/>
+                <path d="M3 7l9 6l9 -6"/>
+              </svg>
+            </a>
+        
+            <!-- WhatsApp -->
+            <a class="contact__icon"
+               href="https://wa.me/528115197693"
+               target="_blank"
+               aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                   fill="none" stroke="currentColor" stroke-width="1.25"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+                <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1
+                         a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

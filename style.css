@@ -87,6 +87,7 @@ img {
   list-style: none;
   display: flex;
   gap: 35px;
+  align-items: center;
 }
 
 .nav__menu a {
@@ -99,10 +100,14 @@ img {
   background-repeat: no-repeat;
   background-position: center bottom;
   transition: color 0.3s ease, background-size 0.3s ease;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 6px;
 }
 
 .nav__menu a:hover {
-  color: lightgray;
+  color: rgba(255,255,255,0.75);
   background-size: 100% 2px;
 }
 
@@ -113,6 +118,49 @@ img {
   font-size: 2rem;
   color: var(--white);
   cursor: pointer;
+}
+
+/* =========================
+   NAV SEARCH (underline like links)
+   ========================= */
+.nav__search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  transition: color 0.3s ease;
+
+  height: 24px;
+  display: inline-flex;          
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0 6px 0;
+
+  /* underline animado */
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 0% 2px;
+
+  transition: background-size 0.3s ease, transform 0.25s ease;
+}
+
+.nav__search button:hover {
+  background-size: 100% 2px;
+  color: rgba(255,255,255,0.75);
+}
+
+.nav__search-icon {
+  width: 22px;
+  height: 22px;
+  color: currentColor;
+  display: block;
+}
+
+.nav__search button:hover .nav__search-icon {
+  color: rgba(255,255,255,0.75);
+  /* transform: scale(1.05); */
 }
 
 /* =========================
@@ -162,6 +210,77 @@ img {
   /* outline: 5px solid var(--blue);  */
 }
 
+.about-highlight {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  /* margin: 120px 0; */
+}
+
+.about-highlight__wrapper {
+  margin-left: auto;
+  margin-right: 0;
+  /* display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0; */
+  /* align-items: stretch; */
+  /* position: relative; */
+}
+
+.about-highlight__content {
+  background: var(--blue);
+  color: var(--white);
+  padding: 80px;
+  /* border-radius: 12px; */
+
+  position: relative;
+  z-index: 2;
+}
+
+.about-highlight__eyebrow {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.about-highlight__content h3 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.about-highlight__content p {
+  font-size: 1.15rem;
+  max-width: 600px;
+}
+
+.about-highlight__stats {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  list-style: none;
+}
+
+.about-highlight__stats strong {
+  font-size: 1.2rem;
+  display: block;
+}
+
+.about-highlight__stats span {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.about-highlight__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 12px; */
+}
+
+
 /* =========================
    CONTACT SECTION
    ========================= */
@@ -179,12 +298,25 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
+  align-items: stretch;
 }
 
 .contact__item h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.contact__item--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 🔑 vertical */
+  align-items: center;       /* 🔑 horizontal */
+  min-height: 100%;
+}
+
+.contact__item--center h3 {
+  margin-bottom: 25px;
 }
 
 .contact iframe {
@@ -217,12 +349,28 @@ img {
 }
 
 /* =========================
+   CONTACT SUBTITLE
+   ========================= */
+.contact__subtitle {
+  margin-top: 8px;
+  margin-bottom: 24px;
+
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(10, 24, 40, 0.75); /* dark-blue suave */
+
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* =========================
    CONTACT ICONS (SVG)
    ========================= */
 .contact__icon svg {
-  width: 42px;
-  height: 42px;
-  stroke-width: 1.5;
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.6;
+  transition: transform 0.25s ease, stroke 0.25s ease;
 }
 
 .contact__icon {
@@ -231,12 +379,8 @@ img {
   justify-content: center;
 }
 
-.contact__icon svg {
-  transition: transform 0.25s ease, stroke 0.25s ease;
-}
-
 .contact__icon:hover svg {
-  transform: scale(1.15);
+  transform: scale(1.12);
 }
 
 /* =========================
@@ -265,8 +409,17 @@ img {
   .contact__grid {
     grid-template-columns: 1fr;
   }
-}
 
+  .about-highlight__wrapper {
+      grid-template-columns: 1fr;
+      gap: 40px;
+  }
+
+  .about-highlight__content {
+      padding: 50px 40px;
+  }
+}
+    
 @media (max-width: 768px) {
   .nav__menu {
     position: absolute;
@@ -345,13 +498,4 @@ img {
 
 .search__results div:hover {
   background: #f5f5f5;
-}
-
-/* LUPITA */
-.nav__search button {
-  background: none;
-  border: none;
-  color: var(--white);
-  font-size: 1.3rem;
-  cursor: pointer;
 }
