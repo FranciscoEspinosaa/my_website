@@ -3,12 +3,20 @@
 // =========================
 const toggleButton = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav__menu');
+const overlay = document.querySelector('.menu-overlay');
 
 if (toggleButton && navMenu) {
   toggleButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
   });
 }
+
+// cerrar al tocar overlay
+overlay.addEventListener('click', () => {
+  navMenu.classList.remove('active');
+  document.body.classList.remove('menu-open');
+});
 
 // =========================
 // CONTACT ICONS (HOVER SVG)

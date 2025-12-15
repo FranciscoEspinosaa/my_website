@@ -142,6 +142,16 @@ img {
   font-size: 2rem;
   color: var(--white);
   cursor: pointer;
+  z-index: 1100;
+}
+
+/* Asegura blanco sobre hero */
+.hero .nav__toggle {
+  color: #fff;
+}
+
+.nav__toggle svg {
+  stroke: #fff;
 }
 
 /* =========================
@@ -186,6 +196,23 @@ img {
 .nav__search button:hover .nav__search-icon {
   color: rgba(255,255,255,0.75);
   /* transform: scale(1.05); */
+}
+
+/* =========================
+   NAV TOGGLE (HAMBURGER)
+   ========================= */
+.nav__toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1100;
+}
+
+/* Asegura blanco sobre hero */
+.hero .nav__toggle {
+  color: #fff;
 }
 
 /* =========================
@@ -463,18 +490,29 @@ img {
     
 @media (max-width: 768px) {
   .nav__menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
+    /* position: absolute; */
+    position: fixed;
+    /* top: 100%; */
+    top: 0;
+    /* right: 0; */
+    right: -100%;
+    height: 32vh;
     background-color: rgba(0, 0, 0, 0.85);
+    /* background: #fff; */
     flex-direction: column;
+    /* width: 100%; */
     width: 100%;
-    padding: 30px 0;
-    display: none;
+    /* padding: 30px 0; */
+    gap: 10px;
+    padding: 100px 32px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
   }
 
   .nav__menu.active {
-    display: flex;
+    /* display: flex; */
+    right: 0;
   }
 
   .nav__toggle {
@@ -574,6 +612,7 @@ img {
 .certs__intro {
   max-width: 700px;
   margin-bottom: 80px;
+  text-align: center;
 }
 
 .certs__intro h2 {
@@ -605,6 +644,21 @@ img {
   text-align: center;
 }
 
+.cert-card__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.cert-card__logo img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+
 /* =========================
    COURSES SECTION
    ========================= */
@@ -628,11 +682,31 @@ img {
   color: rgba(10, 24, 40, 0.75);
 }
 
+/* =========================
+   CERTIFICATIONS GRID
+   ========================= */
+
 /* GRID */
 .courses__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .certs__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .certs__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
 /* CARD */
