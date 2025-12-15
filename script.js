@@ -49,29 +49,46 @@ searchModal.addEventListener("click", (e) => {
   }
 });
 
-// Buscar coincidencias
+// =========================
+// SEARCH GLOBAL (SITE INDEX)
+// =========================
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
   searchResults.innerHTML = "";
 
   if (query.length < 2) return;
 
-  // Busca texto en toda la página
-  const elements = document.querySelectorAll("section, article, p, h1, h2, h3");
-
-  elements.forEach(el => {
-    if (el.textContent.toLowerCase().includes(query)) {
+  SEARCH_INDEX.forEach(item => {
+    if (
+      item.title.toLowerCase().includes(query) ||
+      item.text.toLowerCase().includes(query)
+    ) {
       const result = document.createElement("div");
-      result.textContent = el.textContent.trim().substring(0, 80) + "...";
+      result.innerHTML = `
+        <strong>${item.title}</strong><br>
+        <small>${item.text}</small>
+      `;
 
       result.addEventListener("click", () => {
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
         searchModal.classList.remove("active");
+        searchInput.value = "";
+        searchResults.innerHTML = "";
+      
+        window.location.href = item.url;
       });
+
 
       searchResults.appendChild(result);
     }
   });
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "/") {
+    e.preventDefault();
+    searchModal.classList.add("active");
+    searchInput.focus();
+  }
 });
 
 // =========================
@@ -85,4 +102,34 @@ navLinks.forEach(link => {
       navMenu.classList.remove('active');
     }
   });
+});
+
+// =========================
+// IMAGE LIGHTBOX (COURSES)
+// =========================
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("imageModalImg");
+const courseImages = document.querySelectorAll(".course-card__img");
+
+courseImages.forEach(img => {
+  img.addEventListener("click", () => {
+    modal.classList.add("active");
+    modalImg.src = img.dataset.full || img.src;
+  });
+});
+
+// Click fuera = cerrar
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+    modalImg.src = "";
+  }
+});
+
+// ESC = cerrar (detalle pro)
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.classList.remove("active");
+    modalImg.src = "";
+  }
 });

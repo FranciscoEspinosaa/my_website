@@ -30,7 +30,7 @@ body {
   /* background-color: var(--blue); */
 }
 
-.page {
+/* .page { */
   /* background-color: var(--white); */
   /* max-width: 1400px; */
   /* margin: 2px; */
@@ -38,7 +38,7 @@ body {
 
   /* box-shadow: 0 40px 120px rgba(0, 0, 0, 0.25); */
   /* overflow: hidden; */
-}
+/* } */
 
 img {
   max-width: 100%;
@@ -75,6 +75,14 @@ img {
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: -1;
+}
+
+.hero--small {
+  height: 65vh;
+}
+
+.hero--small .hero__content {
+  height: calc(65vh - 120px);
 }
 
 /* =========================
@@ -118,6 +126,11 @@ img {
 }
 
 .nav__menu a:hover {
+  color: rgba(255,255,255,0.75);
+  background-size: 100% 2px;
+}
+
+.nav__menu a.active {
   color: rgba(255,255,255,0.75);
   background-size: 100% 2px;
 }
@@ -254,9 +267,9 @@ img {
 
 .about-highlight__eyebrow {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   opacity: 0.8;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about-highlight__content h3 {
@@ -406,9 +419,14 @@ img {
    FOOTER
    ========================= */
 .footer {
-  padding: 50px 0;
+  padding: 30px 0;
   text-align: center;
   font-size: 1.1rem;
+  background-color: #1249d6;
+}
+
+.footer p {
+  color: var(--white);
 }
 
 /* =========================
@@ -521,4 +539,175 @@ img {
 
 .search__results div:hover {
   background: #f5f5f5;
+}
+
+/* CERTIFICATIONS PAGE*/
+
+/* =========================
+   HERO CERTIFICATIONS
+   ========================= */
+.hero--certs {
+  position: relative;
+  background-image: url("/images/certs/certs-banner.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero--certs .hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 24, 40, 0.65); /* dark-blue con opacidad */
+  z-index: 0;
+}
+
+.hero--certs .hero__content,
+.hero--certs .nav {
+  position: relative;
+  z-index: 1;
+}
+
+.certs {
+  padding: 140px 0;
+}
+
+.certs__intro {
+  max-width: 700px;
+  margin-bottom: 80px;
+}
+
+.certs__intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.certs__intro p {
+  font-size: 1.2rem;
+  color: rgba(10, 24, 40, 0.8);
+}
+
+.certs__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+
+.cert-link {
+  padding-top: 15px;
+}
+
+.cert-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centra horizontal */
+  justify-content: center;  /* centra vertical */
+  text-align: center;
+}
+
+/* =========================
+   COURSES SECTION
+   ========================= */
+.courses {
+  padding: 120px 0;
+}
+
+.courses__intro {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 70px;
+}
+
+.courses__intro h2 {
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+}
+
+.courses__intro p {
+  font-size: 1.05rem;
+  color: rgba(10, 24, 40, 0.75);
+}
+
+/* GRID */
+.courses__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.course-card {
+  background: #fff;
+  /* border-radius: 5px; */
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.course-card__content {
+  padding: 20px;
+}
+
+.course-card__content h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.course-card__content span {
+  font-size: 0.9rem;
+  color: rgba(10, 24, 40, 0.6);
+}
+
+/* =========================
+   IMAGE MODAL (COURSES)
+   ========================= */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 40px;
+}
+
+.image-modal.active {
+  display: flex;
+}
+
+.image-modal__content img {
+  max-width: 95%;
+  max-height: 90vh;
+  /* border-radius: 6px; */
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* UX */
+.course-card__img {
+  cursor: zoom-in;
 }
