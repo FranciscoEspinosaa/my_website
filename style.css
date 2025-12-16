@@ -38,26 +38,9 @@ body.menu-open {
   overflow: hidden;
 }
 
-body.menu-open .nav__toggle {
-  font-size: 2rem;
-}
-
-body.menu-open .nav__toggle:hover {
-  color: var(--blue);
-}
-
-/* Lupa dentro del menú desplegado */
-body.menu-open .nav__search button {
-  color: #000000;
-  width: 30px;
-  height: 30px;
-}
-
 body.menu-open .nav__search button:hover {
   color: var(--blue);
 }
-
-
 
 img {
   max-width: 100%;
@@ -112,6 +95,8 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0;
+  position: relative;
+  z-index: 5000;
 }
 
 .nav__logo {
@@ -161,17 +146,9 @@ img {
   font-size: 2rem;
   color: var(--white);
   cursor: pointer;
-  z-index: 1100;
+  position: relative;
+  z-index: 7000;
 }
-
-/* Asegura blanco sobre hero */
-.hero .nav__toggle {
-  color: #fff;
-}
-
-/* .nav__toggle svg {
-  stroke: #fff;
-} */
 
 /* =========================
    NAV SEARCH (underline like links)
@@ -181,7 +158,7 @@ img {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--black);
+  color: currentColor;
   transition: color 0.3s ease;
 
   height: 24px;
@@ -210,28 +187,6 @@ img {
   height: 22px;
   color: currentColor;
   display: block;
-}
-
-.nav__search button:hover .nav__search-icon {
-  /* color: var(--blue) */
-  /* transform: scale(1.05); */
-}
-
-/* =========================
-   NAV TOGGLE (HAMBURGER)
-   ========================= */
-.nav__toggle {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #fff;
-  z-index: 1100;
-}
-
-/* Asegura blanco sobre hero */
-.hero .nav__toggle {
-  color: #fff;
 }
 
 /* =========================
@@ -284,32 +239,43 @@ img {
   /* display: grid;
   grid-template-columns: 1fr 1fr; */
   gap: 80px;
-  padding: 40px 0;
+  padding: 80px 0;
   width: 100%;
-  /* margin: 120px 0; */
 }
 
 .about-highlight__wrapper {
 
   /* margin-left: auto;
-  margin-right: 0; */
-  /* display: grid;
-  grid-template-columns: 1fr 2fr; */
+  margin-right: 0;*/
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
   gap: 0;
-  /* align-items: stretch; */
+  align-items: center;
   min-height: 520px;
 }
 
 .about-highlight__content {
   background: var(--blue);
   color: var(--white);
-  padding: 80px;
+  padding: 80px; 
 
   display: flex; 
   flex-direction: column;
   justify-content: center; 
   align-items: center;
+  /* text-align: right; */
 } 
+
+.about-highlight__content h3,
+.about-highlight__content p,
+.about-highlight__stats {
+  max-width: 600px;
+}
 
 .about-highlight__eyebrow {
   display: block;
@@ -322,6 +288,7 @@ img {
   font-size: 2.2rem;
   line-height: 1.2;
   margin-bottom: 30px;
+  /* text-align: center; */
 }
 
 .about-highlight__content p {
@@ -346,18 +313,6 @@ img {
   font-size: 0.95rem;
   opacity: 0.85;
 }
-
-.about-highlight__image img {
-  position: relative;
-}
-
-.about-highlight__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 
 /* =========================
    CONTACT SECTION
@@ -503,29 +458,25 @@ img {
   }
 
   .about-highlight__content {
-      padding: 50px 40px;
+    padding: 50px 40px;
+    align-items: center;
+    text-align: center;
   }
 }
     
 @media (max-width: 768px) {
   .nav__menu {
-    /* position: absolute; */
     position: fixed;
-    /* top: 100%; */
     top: 0;
-    /* right: 0; */
     right: -100%;
     height: 100%;
-    /* background-color: rgba(0, 0, 0, 0.85); */
     background: #fff;
     flex-direction: column;
-    /* width: 100%; */
     width: 100%;
-    /* padding: 30px 0; */
     gap: 80px;
     padding: 120px 32px;
     transition: right 0.3s ease;
-    z-index: 1000;
+    z-index: 6000;
     display: flex;
   }
 
@@ -534,14 +485,13 @@ img {
   }
 
   .nav__menu.active {
-    /* display: flex; */
     right: 0;
   }
 
   .nav__menu.active a {
     font-weight: 500;
-    font-size: x-large;
-    letter-spacing: 1px;
+    font-size: xx-large;
+    /* letter-spacing: 1px; */
   }
 
   .nav__menu a:hover,
@@ -572,20 +522,6 @@ img {
     color: currentColor;
   }
 
-  .nav__menu.active ~ .nav__toggle,
-  .nav.menu-open .nav__toggle,
-  body.menu-open .nav__toggle {
-    color: var(--black);
-    font-weight: 300;
-    line-height: 1;
-  }
-
-  @media (min-width: 769px) {
-    .nav__search button {
-    color: var(--white);
-    }
-  }
-
 /* =========================
    SEARCH MODAL
    ========================= */
@@ -597,7 +533,7 @@ img {
   align-items: flex-start;
   justify-content: center;
   padding-top: 120px;
-  z-index: 999;
+  z-index: 4000;
 }
 
 .search.active {
@@ -657,20 +593,14 @@ img {
   z-index: 0;
 }
 
-.hero--certs .hero__content,
-.hero--certs .nav {
-  position: relative;
-  z-index: 1;
-}
-
 .certs {
   padding: 140px 0;
 }
 
 .certs__intro {
-  max-width: 700px;
-  margin-bottom: 80px;
   text-align: center;
+  max-width: 680px;
+  margin: 0 auto 70px;
 }
 
 .certs__intro h2 {
@@ -681,6 +611,7 @@ img {
 .certs__intro p {
   font-size: 1.2rem;
   color: rgba(10, 24, 40, 0.8);
+  text-align: center;
 }
 
 .certs__grid {
@@ -692,6 +623,14 @@ img {
 
 .cert-link {
   padding-top: 15px;
+}
+
+.cert-link a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+  color: var(--blue);
+  transition: 0.2s ease;
 }
 
 .cert-card__content {
@@ -715,7 +654,6 @@ img {
   height: auto;
   object-fit: contain;
 }
-
 
 /* =========================
    COURSES SECTION
@@ -842,4 +780,83 @@ img {
 /* UX */
 .course-card__img {
   cursor: zoom-in;
+}
+
+/* =========================
+   MOBILE MENU – QUITAR UNDERLINE (LINKS + LUPA)
+   ========================= */
+@media (max-width: 768px) {
+  /* Links */
+  .nav__menu.active a {
+    background-image: none !important;
+    padding-bottom: 0;
+  }
+
+  /* Lupa */
+  .nav__menu.active .nav__search button {
+    background-image: none !important;
+    padding-bottom: 0;
+  }
+}
+
+/* =========================
+   SEARCH ICON COLOR FIX
+   ========================= */
+
+/* Desktop: SIEMPRE blanca */
+@media (min-width: 769px) {
+  .nav__search button {
+    color: var(--white);
+  }
+
+  body.menu-open .nav__search button {
+    color: var(--white);
+  }
+
+  .nav__search button:hover {
+    color: rgba(255,255,255,0.75);
+  }
+}
+
+/* Mobile: negra solo dentro del menú */
+@media (max-width: 768px) {
+  body.menu-open .nav__menu .nav__search button {
+    color: var(--black);
+  }
+
+  body.menu-open .nav__menu .nav__search button:hover {
+    color: var(--blue);
+  }
+}
+
+/* =========================
+   NAV TOGGLE – FINAL FIX
+   ========================= */
+
+/* Estado normal (hamburguesa) */
+.nav__toggle {
+  color: var(--white);
+}
+
+/* Menú abierto (X visible sobre fondo blanco) */
+body.menu-open .nav__toggle {
+  color: var(--black);
+}
+
+/* Hover de la X */
+body.menu-open .nav__toggle:hover {
+  color: var(--blue);
+}
+
+/* =========================
+   SEARCH ICON – DESKTOP
+   ========================= */
+@media (min-width: 769px) {
+  body:not(.menu-open) .nav__search button {
+    color: var(--white);
+  }
+
+  body:not(.menu-open) .nav__search button:hover {
+    color: rgba(255,255,255,0.75);
+  }
 }

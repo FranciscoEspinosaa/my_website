@@ -48,32 +48,32 @@ const SEARCH_INDEX = [
   {
     title: "Certificaciones",
     text: "Formación continua en redes, cloud y tecnologías IT empresariales",
-    url: "/certificaciones.html"
+    url: "/certs.html"
   },
   {
     title: "CCNA",
     text: "Cisco Certified Network Associate, fundamentos de networking, routing y switching",
-    url: "/certificaciones.html#ccna"
+    url: "/certs.html#ccna"
   },
   {
     title: "Cisco",
     text: "Certificación Cisco orientada a redes empresariales",
-    url: "/certificaciones.html#ccna"
+    url: "/certs.html#ccna"
   },
   {
     title: "Networking",
     text: "Routing, switching, fundamentos de redes y troubleshooting",
-    url: "/certificaciones.html#ccna"
+    url: "/certs.html#ccna"
   },
   {
     title: "Azure AZ-900",
     text: "Fundamentos de Microsoft Azure y servicios en la nube",
-    url: "/certificaciones.html#az900"
+    url: "/certs.html#az900"
   },
   {
     title: "Azure AZ-104",
     text: "Administrador de Microsoft Azure y servicios en la nube",
-    url: "/certificaciones.html#az104"
+    url: "/certs.html#az104"
   },
 
   /* =========================

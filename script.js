@@ -1,21 +1,34 @@
 // =========================
-// MENÚ HAMBURGUESA (RESPONSIVE)
+// MENÚ HAMBURGUESA
 // =========================
 const toggleButton = document.querySelector('.nav__toggle');
 const navMenu = document.querySelector('.nav__menu');
-const overlay = document.querySelector('.menu-overlay');
 
-if (toggleButton && navMenu) {
-  toggleButton.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-
-    // ☰ ↔ ✕
-    toggleButton.textContent = navMenu.classList.contains('active')
-      ? '✕'
-      : '☰';
-  });
+function closeMenu() {
+  navMenu.classList.remove('active');
+  document.body.classList.remove('menu-open');
+  toggleButton.textContent = '☰';
 }
+
+function openMenu() {
+  navMenu.classList.add('active');
+  document.body.classList.add('menu-open');
+  toggleButton.textContent = '✕';
+}
+
+toggleButton.addEventListener('click', (e) => {
+  e.stopPropagation(); // 🔑 MUY IMPORTANTE
+  navMenu.classList.contains('active') ? closeMenu() : openMenu();
+});
+
+// =========================
+// CERRAR EN RESIZE
+// =========================
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    closeMenu();
+  }
+});
 
 // =========================
 // CONTACT ICONS (HOVER SVG)
@@ -41,13 +54,13 @@ const searchModal = document.getElementById("searchModal");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
 
-// Abrir buscador
 searchBtn.addEventListener("click", () => {
+  closeMenu(); // 🔑 sincroniza ícono
+
   searchModal.classList.add("active");
   searchInput.focus();
 });
 
-// Cerrar al hacer click fuera
 searchModal.addEventListener("click", (e) => {
   if (e.target === searchModal) {
     searchModal.classList.remove("active");
@@ -99,19 +112,6 @@ document.addEventListener("keydown", (e) => {
 });
 
 // =========================
-// CERRAR MENÚ AL HACER CLICK (MOBILE)
-// =========================
-const navLinks = document.querySelectorAll('.nav__menu a');
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    if (navMenu.classList.contains('active')) {
-      navMenu.classList.remove('active');
-    }
-  });
-});
-
-// =========================
 // IMAGE LIGHTBOX (COURSES)
 // =========================
 const modal = document.getElementById("imageModal");
@@ -136,7 +136,16 @@ modal.addEventListener("click", (e) => {
 // ESC = cerrar (detalle pro)
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    modal.classList.remove("active");
+    modal.classList.remove("active");127.
     modalImg.src = "";
   }
+});
+
+// =========================
+// CERRAR AL CLICK EN LINKS
+// =========================
+document.querySelectorAll('.nav__menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    closeMenu();
+  });
 });
