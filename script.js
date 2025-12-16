@@ -9,14 +9,13 @@ if (toggleButton && navMenu) {
   toggleButton.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     document.body.classList.toggle('menu-open');
+
+    // ☰ ↔ ✕
+    toggleButton.textContent = navMenu.classList.contains('active')
+      ? '✕'
+      : '☰';
   });
 }
-
-// cerrar al tocar overlay
-overlay.addEventListener('click', () => {
-  navMenu.classList.remove('active');
-  document.body.classList.remove('menu-open');
-});
 
 // =========================
 // CONTACT ICONS (HOVER SVG)
