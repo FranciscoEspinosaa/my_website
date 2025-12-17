@@ -1081,3 +1081,38 @@ body.menu-open .nav__toggle {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   PROJECTS PAGE
+   ========================= */
+
+   .under_construction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+  }
