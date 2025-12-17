@@ -511,7 +511,7 @@ img {
    ========================= */
 .hero--certs {
   position: relative;
-  background-image: url("/images/certs/certs-banner.webp");
+  background-image: url("/images/certifications/certs-banner.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -930,7 +930,7 @@ body.menu-open .nav__toggle {
    ========================= */
 .hero--experience {
   position: relative;
-  background-image: url("/images/exp/exp-banner.jpg");
+  background-image: url("/images/experience/exp-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
