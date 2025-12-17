@@ -42,38 +42,56 @@ const SEARCH_INDEX = [
     url: "/index.html#about-highlight"
   },
 
+   /* =========================
+     EXPERIENCIA PROFESIONAL
+     ========================= */
+  // {
+  //   title: "Cursos",
+  //   text: "Cursos y formación complementaria",
+  //   url: "/certifications.html#cursos"
+  // },
+
   /* =========================
      CERTIFICACIONES
      ========================= */
   {
     title: "Certificaciones",
     text: "Formación continua en redes, cloud y tecnologías IT empresariales",
-    url: "/certs.html"
+    url: "/certifications.html"
   },
   {
     title: "CCNA",
     text: "Cisco Certified Network Associate, fundamentos de networking, routing y switching",
-    url: "/certs.html#ccna"
+    url: "/certifications.html#ccna"
   },
   {
     title: "Cisco",
     text: "Certificación Cisco orientada a redes empresariales",
-    url: "/certs.html#ccna"
+    url: "/certifications.html#ccna"
   },
   {
     title: "Networking",
     text: "Routing, switching, fundamentos de redes y troubleshooting",
-    url: "/certs.html#ccna"
+    url: "/certifications.html#ccna"
   },
   {
     title: "Azure AZ-900",
     text: "Fundamentos de Microsoft Azure y servicios en la nube",
-    url: "/certs.html#az900"
+    url: "/certifications.html#az900"
   },
   {
     title: "Azure AZ-104",
     text: "Administrador de Microsoft Azure y servicios en la nube",
-    url: "/certs.html#az104"
+    url: "/certifications.html#az104"
+  },
+
+  /* =========================
+     CURSOS
+     ========================= */
+  {
+    title: "Cursos",
+    text: "Cursos y formación complementaria",
+    url: "/certifications.html#cursos"
   },
 
   /* =========================
