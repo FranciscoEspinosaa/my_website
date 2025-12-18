@@ -726,7 +726,7 @@ img {
    COURSES SECTION
    ========================= */
 .courses {
-  padding: 140px 0;
+  padding: 120px 0;
   max-width: 1500px;
 }
 
@@ -1273,10 +1273,25 @@ body.menu-open .nav__toggle {
   }
 }
 
+
+
 @media (max-height: 480px) {
 
   body {
     line-height: normal;
+  }
+
+  .nav {
+    display:block;
+    /* justify-content: space-between;
+    align-items: center; */
+    /* position: relative; */
+    /* z-index: 5000; */
+    z-index: 100;
+  }
+
+  .nav__menu {
+    padding-top: 15px;
   }
 }
 
