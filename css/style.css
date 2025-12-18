@@ -258,23 +258,13 @@ img {
 }
 
 .about-highlight {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
   gap: 80px;
-  /* padding: 140px 0; */
   width: 100%;
 }
 
 .about-highlight__wrapper {
-
-  /* margin-left: auto;
-  margin-right: 0;*/
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 
   gap: 0;
   align-items: center;
@@ -310,7 +300,6 @@ img {
   font-size: 2.2rem;
   line-height: 1.2;
   margin-bottom: 30px;
-  /* text-align: center; */
 }
 
 .about-highlight__content p {
@@ -560,6 +549,26 @@ img {
   background: #f5f5f5;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CERTIFICATIONS PAGE*/
 
 /* =========================
@@ -603,11 +612,6 @@ img {
 }
 
 .certs__grid {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 200px; */
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -647,6 +651,9 @@ img {
   object-fit: contain;
 }
 
+  
+
+
 /* =========================
    COURSES SECTION
    ========================= */
@@ -684,7 +691,6 @@ img {
 /* CARD */
 .course-card {
   background: #fff;
-  /* border-radius: 5px; */
   overflow: hidden;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -737,7 +743,6 @@ img {
 .image-modal__content img {
   max-width: 95%;
   max-height: 90vh;
-  /* border-radius: 6px; */
   box-shadow: 0 30px 60px rgba(0,0,0,0.45);
   animation: zoomIn 0.25s ease;
 }
@@ -775,31 +780,6 @@ img {
   }
 }
 
-/* =========================
-   SEARCH ICON COLOR FIX
-   ========================= */
-
-/* Desktop: SIEMPRE blanca */
-/* @media (min-width: 769px) {
-  .nav__search button {
-    color: var(--white);
-  }
-
-  body.menu-open .nav__search button {
-    color: var(--white);
-  }
-
-  .nav__search button:hover {
-    color: rgba(255,255,255,0.75);
-  }
-} */
-
-/* Mobile: negra solo dentro del menú */
-/* @media (max-width: 768px) {
-  body.menu-open .nav__menu .nav__search button {
-    color: var(--black);
-  } */
-
   body.menu-open .nav__menu .nav__search button:hover {
     color: var(--blue);
   }
@@ -815,16 +795,10 @@ img {
 
 /* Menú abierto (X visible sobre fondo blanco) */
 body.menu-open .nav__toggle {
-  /* color: var(--black); */
   color: var(--blue);
   font-weight: 900;
   font-size: 40px;
 }
-
-/* Hover de la X */
-/* body.menu-open .nav__toggle:hover {
-  color: var(--blue);
-} */
 
 /* =========================
    SEARCH ICON – DESKTOP
@@ -863,9 +837,6 @@ body.menu-open .nav__toggle {
   text-align: center;
   max-width: 680px;
   margin: 0 auto 70px;
-
-  /* max-width: 680px;
-  margin-bottom: 4rem; */
 
   display: flex;
   flex-direction: column;
@@ -1068,6 +1039,14 @@ body.menu-open .nav__toggle {
     text-align: center;
   }
 }
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .nav__menu.active {
+    padding-top: 55px;
+    gap: 38px;
+  }
+}
+
     
 @media (max-width: 768px) {
   .nav__menu {
@@ -1085,6 +1064,9 @@ body.menu-open .nav__toggle {
     /* z-index: 6000; */
     z-index: 1000;
     display: flex;
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav__menu a {
@@ -1096,7 +1078,7 @@ body.menu-open .nav__toggle {
   }
 
   .nav__menu.active a {
-    font-weight: 500;
+    font-weight: 400;
     font-size: xx-large;
     /* letter-spacing: 1px; */
   }
@@ -1189,7 +1171,12 @@ body.menu-open .nav__toggle {
   }
 }
 
+@media (max-height: 480px) {
 
+  body {
+    line-height: normal;
+  }
+}
 
 
 
