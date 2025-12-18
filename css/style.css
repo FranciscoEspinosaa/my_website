@@ -246,6 +246,19 @@ img {
   background-size: 100% 1px;
 }
 
+.nav__lang-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__separator {
+  color: var(--white);
+  font-size: 1.2rem;
+  /* Ajuste fino: si sigue viéndose bajo, puedes usar un margen negativo */
+  margin-top: -8px; 
+}
+
 /* =========================
    HERO CONTENT
    ========================= */
@@ -1232,7 +1245,7 @@ body.menu-open .nav__toggle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-}
+  }
 
   .courses__grid {
     grid-template-columns: 1fr;
@@ -1253,6 +1266,10 @@ body.menu-open .nav__toggle {
     height: auto;
     object-fit: contain;
     margin: 10px;
+  }
+
+  .nav__logo {
+    font-size: 2rem;
   }
 }
 
