@@ -1303,7 +1303,8 @@ body.menu-open .nav__toggle {
     color: currentColor;
   }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) { */
+@media (max-width: 768px) {
 
   .certs__grid {
   display: grid;
@@ -1352,7 +1353,7 @@ body.menu-open .nav__toggle {
 
 
 @media (max-height: 480px) {
-
+/* @media (max-height: 768px) { */
   body {
     line-height: normal;
   }
