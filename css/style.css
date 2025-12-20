@@ -1335,6 +1335,18 @@ body.menu-open .nav__toggle {
   .nav__logo {
     font-size: 2rem;
   }
+
+  .nav__lang {
+    padding-top: 20px;
+    padding-left: 0%;
+  }
+
+  .nav__separator {
+    color: #000000;
+    padding: 0 15px 0 15px;
+    margin-top: -5px;
+    font-size: 2.2rem;
+  }
 }
 
 
@@ -1345,14 +1357,14 @@ body.menu-open .nav__toggle {
     line-height: normal;
   }
 
-  .nav {
-    display:block;
+  /* .nav { */
+    /* display:block; */
     /* justify-content: space-between;
     align-items: center; */
     /* position: relative; */
     /* z-index: 5000; */
-    z-index: 100;
-  }
+    /* z-index: 100; */
+  /* } */
 
   .nav__menu {
     padding-top: 15px;
