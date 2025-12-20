@@ -437,6 +437,7 @@ img {
    ========================= */
 .contact {
   padding: 120px 0;
+  /* padding-bottom: 0%; */
   max-width: 1200px;
 }
 
@@ -534,6 +535,38 @@ img {
 .contact__icon:hover svg {
   transform: scale(1.12);
 }
+
+/* =========================
+   BACK TO TOP
+   ========================= */
+  .backToTop {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0 70px;
+  }
+
+  .backToTopBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    border-radius: 50%;
+    
+    width: 50px;
+    height: 50px;
+  }
+
+  .backToTopBtn:hover {
+    opacity: 0.9;
+  }
+
+  .backToTopBtn a {
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+  }
 
 /* =========================
    FOOTER
@@ -1082,25 +1115,25 @@ body.menu-open .nav__toggle {
   align-items: center;
 }
 
+#cvBtn:hover {
+  opacity: 0.9;
+}
+
 #cvBtn {
   color: var(--white);
   display: inline-block;
   font-family: "Urbanist", sans-serif;
   background-color: var(--blue);
   padding: 10px 30px;
-  cursor: pointer;
   line-height: 1.6;
   font-size: 1.3rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #cvBtn:focus-visible {
   outline: 2px solid rgba(255,255,255,.6);
   outline-offset: 3px;
-}
-
-#cvBtn:hover {
-  opacity: 0.9;
 }
 
 /* RESPONSIVE */
@@ -1312,6 +1345,9 @@ body.menu-open .nav__toggle {
     margin: 0 auto;
   }
 
+  .backToTop {
+    display: none;
+  }
   
 }
 
