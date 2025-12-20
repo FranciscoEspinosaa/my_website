@@ -95,7 +95,7 @@ const SEARCH_INDEX = [
   },
 
   /* =========================
-     CONTACTO
+     CONTACTO / CONTACT
      ========================= */
   {
     title: "Contacto",
@@ -135,5 +135,31 @@ const SEARCH_INDEX = [
     title: "Oportunidades Jr",
     text: "Abierto a oportunidades Junior y Entry Level en IT",
     url: "/index.html#contact"
-  }
+  },
+
+  {
+    title: "Opportunities",
+    text: "Open to new professional opportunities",
+    url: "/en/#en-contact"
+  },
+
+  /* =========================
+   CV
+   ========================= */
+{
+  title: "Descargar CV",
+  text: "Currículum profesional en formato PDF",
+  url: "/experiencia/#cv"
+},
+{
+  title: "Currículum",
+  text: "Experiencia en infraestructura IT, redes y cloud",
+  url: "/experiencia/#cv"
+},
+{
+  title: "Download CV",
+  text: "Download my CV in PDF format to review my professional background",
+  url: "/en/experience/#en-cv"
+}
 ];
+
