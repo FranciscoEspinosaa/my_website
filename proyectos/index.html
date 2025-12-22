@@ -1,17 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos | Francisco Espinosa</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Experiencia profesional de Francisco Espinosa en soporte técnico, redes, cloud y entornos empresariales." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Urbanist:wght@100..900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Languages -->
+  <link rel="alternate" hreflang="es" href="https://francisco-espinosa.com/" />
+  <link rel="alternate" hreflang="en" href="https://francisco-espinosa.com/en/">
+
 </head>
 <body>
-    <h1>En construcción... Tomará algo de tiempo en que algo aparezca aquí.</h1>
-    <h3>Gracias por su paciencia.</h3>
-    <div class="under_construction">
-        <img src="/images/projects/under_construction.png" alt="under_construction">
+
+  <div class="page">
+    <!-- HEADER -->
+    <header class="hero hero--small hero--projects">
+      <div class="hero__overlay"></div>
+
+      <!-- Navigation -->
+      <nav class="nav container">
+        <a href="/" class="nav__logo">Francisco Espinosa</a>
+        <button class="nav__toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav__menu">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/experiencia/">Experiencia</a></li>
+          <li><a href="/proyectos/">Proyectos</a></li>
+          <li><a href="/certificaciones/">Certificaciones</a></li>
+
+          <!-- SEARCH -->
+          <li class="nav__search">
+            <button id="searchBtn" aria-label="Buscar">
+              <svg class="nav__search-icon"
+                   xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.5"
+                   stroke-linecap="round"
+                   stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </button>
+          </li>
+          <div class="nav__lang">
+            <li class="nav__lang-item"><a href="/proyectos/" lang="es" title="Español"><strong>ES</strong></a></li>
+            <li class="nav__lang-item"><span class="nav__separator">|</span></li>
+            <li class="nav__lang-item"><a href="/en/projects/" lang="en" title="English">EN</a></li>
+          </div>
+        </ul>
+      </nav>
+
+      <!-- HERO CONTENT -->
+      <div class="hero__content container">
+        <h1>Proyectos</h1>
+        <p>
+          Implementaciones y laboratorios diseñados para reforzar habilidades en cloud, redes y administración de sistemas.
+        </p>
+      </div>
+    </header>
+
+    <!-- PROJECTS -->
+    <section class="projects container">
+
+      <div class="projects__intro">
+        <h2>Proyectos técnicos</h2>
+        <p>
+          Esta sección presenta proyectos y laboratorios desarrollados como parte de mi
+          formación continua y experiencia práctica.
+        </p>
+      </div>
+
+      <div class="projects__list">
+
+        <!-- JOB 1 -->
+        <article class="projects-item">
+          <div class="projects-item__header">
+            <h3>Help Desk / Soporte IT Analyst</h3>
+            <span class="projects-item__company">Nelson Global</span><br>
+            <span class="projects-item__date">Junio 2021 – Septiembre 2025</span>
+          </div>
+
+          <p class="projects-item__summary">
+            Soporte técnico a usuarios finales y áreas internas, resolución de incidencias
+            de hardware, software, redes y servicios corporativos en entornos Windows y cloud.
+          </p>
+
+          <ul class="projects-item__list">
+            <li>Atención y resolución de tickets nivel 1 y 2 mediante sistemas de gestión.</li>
+            <li>Soporte técnico remoto y en sitio a estaciones de trabajo Windows y periféricos.</li>
+            <li>Gestión y control de inventarios de activos de TI de la compañía.</li>
+            <li>Administración de usuarios y grupos en Active Directory.</li>
+            <li>Configuración y diagnóstico de red (IP, DNS, conectividad, VPN).</li>
+            <li>Soporte a servicios Microsoft 365 y Entra ID.</li>
+            <li>Documentación de incidencias y procedimientos técnicos.</li>
+            <li>Administración de usuarios y accesos en sistemas ERP (Epicor, SAP y SAP HANA), incluyendo alta, baja y 
+                gestión de credenciales.</li>
+          </ul>
+
+          <div class="projects-item__stack">
+            Windows · Active Directory · Redes · Microsoft 365 · Azure · Soporte IT · Resolución de Problemas · ERP · TCP/IP
+             · MFA · OneDrive
+          </div>
+        </article>
+
+        <!-- JOB 2 -->
+        <article class="projects-item">
+          <div class="projects-item__header">
+            <h3>Administrador de Redes / Infraestructura</h3>
+            <span class="projects-item__company">DolEx Dollar Express, Inc.</span><br>
+            <span class="projects-item__date">Noviembre 2016 - Junio 2021</span>
+          </div>
+
+          <p class="projects-item__summary">
+            Participación en la operación y administración de infraestructura IT empresarial, con enfoque en redes, seguridad, 
+            servicios Microsoft y entornos híbridos on-premise y cloud.
+          </p>
+
+          <ul class="projects-item__list">
+            <li>Instalación y configuración de redes LAN y dispositivos de red.</li>
+            <li>Soporte técnico presencial y remoto a usuarios.</li>
+            <li>Configuración de routers, switches y firewalls.</li>
+            <li>Respaldos, mantenimiento preventivo y correctivo.</li>
+            <li>Apoyo en migraciones y mejoras de infraestructura.</li>
+            <li>Supervisión y diagnóstico de infraestructura de red, monitoreando latencia, tráfico, 
+                disponibilidad de enlaces, servidores y servicios.</li>
+            <li>Soporte a usuarios y resolución de incidencias en servicios Microsoft 365 y Entra ID.</li>
+          </ul>
+
+          <div class="projects-item__stack">
+            Redes · Cisco · Juniper · Windows · Linux · Resolución de Problemas · PRTG · Soporte en Sitio · Microsoft 365 · 
+            Active Directory · Azure · Sharepoint · DFS
+          </div>
+        </article>
+
+        <!-- JOB 3 -->
+        <article class="projects-item projects-item-last">
+          <div class="projects-item__header">
+            <h3>Help Desk</h3>
+            <span class="projects-item__company">DolEx Dollar Express, Inc.</span><br>
+            <span class="projects-item__date">Noviembre 2014 - Noviembre 2016</span>
+          </div>
+
+          <p class="projects-item__summary">
+            Soporte técnico y operación IT, brindando atención a usuarios, 
+            gestión de incidencias y soporte a infraestructura básica de red y dispositivos en sucursales internacionales.
+          </p>
+
+          <ul class="projects-item__list">
+            <li>Soporte Help Desk vía sistema de tickets y atención telefónica.</li>
+            <li>Soporte remoto a sucursales internacionales (hardware, red y periféricos).</li>
+            <li>Gestión básica de Active Directory on-premises.</li>
+            <li>Administración y monitoreo de routers Cradlepoint.</li>
+            <li>Coordinación con ISP para resolución de fallas de conectividad.</li>
+          </ul>
+
+          <div class="projects-item__stack">
+            Soporte IT · Help Desk · Windows · Cradlepoint · Resolución de Problemas · Soporte en Sitio · Active Directory · Hardware · Soporte Remoto
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- <section class="cv container" id="cv">
+      <div class="cv__intro">
+        <h2>Descargar CV</h2>
+        <p>
+          Versión descargable de mi perfil profesional en formato PDF, con información técnica y experiencia laboral.
+        </p>
+      </div>
+
+      <div class="cv__download">
+        <a
+          id="cvBtn"
+          href="https://safewebsiteportfolio.blob.core.windows.net/ctnrfewebsiteportfolio/cv/Francisco_Espinosa_CV.pdf"
+          target="_blank"
+          download
+        >
+          Descargar
+        </a>
+      </div>
+    </section> -->
+
+    <section class="backToTop container">
+      <div class="backToTopBtn">
+        <a href="/proyectos/">
+          <!--
+          tags: [top, point]
+          category: Arrows
+          version: "1.0"
+          unicode: "ea25"
+          -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#ffffff"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 5l0 14" />
+            <path d="M18 11l-6 -6" />
+            <path d="M6 11l6 -6" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 · Desarrollado por Francisco Espinosa</p>
+    </footer>
+
+    <!-- SEARCH MODAL -->
+    <div class="search" id="searchModal">
+      <div class="search__box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar en el sitio..."
+          autocomplete="off"
+        />
+        <div class="search__results" id="searchResults"></div>
+      </div>
     </div>
-    <a href="/">Regresar al inicio</a>
+
+    <div class="menu-overlay"></div>
+  </div>
+
+  <script src="/js/search-data.js" defer></script>
+  <script src="/js/script.js" defer></script>
 </body>
 </html>
