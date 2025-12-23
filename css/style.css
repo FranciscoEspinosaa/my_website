@@ -303,6 +303,7 @@ img {
 
 .about__image img {
   width: 70%;
+  height: 70%;
   margin-left: auto;
   border-radius: 50%;
 }
@@ -1378,6 +1379,28 @@ body.menu-open .nav__toggle {
   margin-bottom: 140px;
 }
 
+.projects-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.projects-link a {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  transition: fill 0.3s ease;
+}
+
+.projects-link a:hover {
+  fill: #1249d6;
+}
+
+.projects-link svg {
+  height: 30px;
+  width: 30px;
+}
 
 
 

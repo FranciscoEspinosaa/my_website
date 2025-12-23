@@ -5,12 +5,12 @@ const SEARCH_INDEX = [
   {
     title: "Inicio",
     text: "Portafolio profesional de infraestructura IT, redes y cloud",
-    url: "/index.html"
+    url: "/"
   },
   {
     title: "Infraestructura IT",
     text: "Soporte técnico, administración de sistemas, redes y servicios empresariales",
-    url: "/index.html#about"
+    url: "/#about"
   },
 
   /* =========================
@@ -19,27 +19,27 @@ const SEARCH_INDEX = [
   {
     title: "Mi experiencia",
     text: "Más de una década manteniendo y optimizando infraestructura IT en entornos críticos",
-    url: "/index.html#about-highlight"
+    url: "/#about-highlight"
   },
   {
     title: "Experiencia en IT",
     text: "11 años de experiencia en soporte técnico, redes, Active Directory y Microsoft 365",
-    url: "/index.html#about-highlight"
+    url: "/#about-highlight"
   },
   {
     title: "Soporte técnico",
     text: "Soporte remoto y en sitio, atención a usuarios, troubleshooting y mejora continua",
-    url: "/index.html#about-highlight"
+    url: "/#about-highlight"
   },
   {
     title: "Infraestructura y redes",
     text: "Administración de redes, Active Directory, O365 y entornos empresariales",
-    url: "/index.html#about-highlight"
+    url: "/#about-highlight"
   },
   {
     title: "Cloud Azure",
     text: "Experiencia con Microsoft Azure y entornos híbridos",
-    url: "/index.html#about-highlight"
+    url: "/#about-highlight"
   },
 
    /* =========================
@@ -57,32 +57,32 @@ const SEARCH_INDEX = [
   {
     title: "Certificaciones",
     text: "Formación continua en redes, cloud y tecnologías IT empresariales",
-    url: "/certifications.html"
+    url: "/certificaciones/"
   },
   {
     title: "CCNA",
     text: "Cisco Certified Network Associate, fundamentos de networking, routing y switching",
-    url: "/certifications.html#ccna"
+    url: "/certificaciones/#ccna"
   },
   {
     title: "Cisco",
     text: "Certificación Cisco orientada a redes empresariales",
-    url: "/certifications.html#ccna"
+    url: "/certificaciones/#ccna"
   },
   {
     title: "Networking",
     text: "Routing, switching, fundamentos de redes y troubleshooting",
-    url: "/certifications.html#ccna"
+    url: "/certificaciones/#ccna"
   },
   {
     title: "Azure AZ-900",
     text: "Fundamentos de Microsoft Azure y servicios en la nube",
-    url: "/certifications.html#az900"
+    url: "/certificaciones/#az900"
   },
   {
     title: "Azure AZ-104",
     text: "Administrador de Microsoft Azure y servicios en la nube",
-    url: "/certifications.html#az104"
+    url: "/certificaciones/#az104"
   },
 
   /* =========================
@@ -91,7 +91,7 @@ const SEARCH_INDEX = [
   {
     title: "Cursos",
     text: "Cursos y formación complementaria",
-    url: "/certifications.html#cursos"
+    url: "/certificaciones/#cursos"
   },
 
   /* =========================
@@ -100,17 +100,17 @@ const SEARCH_INDEX = [
   {
     title: "Contacto",
     text: "Información de contacto profesional",
-    url: "/index.html#contact"
+    url: "/#contact"
   },
   {
     title: "Ubicación",
     text: "Monterrey, Nuevo León, México",
-    url: "/index.html#contact"
+    url: "/#contact"
   },
   {
     title: "Conectemos",
     text: "LinkedIn, correo electrónico y WhatsApp",
-    url: "/index.html#contact"
+    url: "/#contact"
   },
   {
     title: "LinkedIn",
@@ -134,7 +134,7 @@ const SEARCH_INDEX = [
   {
     title: "Oportunidades Jr",
     text: "Abierto a oportunidades Junior y Entry Level en IT",
-    url: "/index.html#contact"
+    url: "/#contact"
   },
 
   {
