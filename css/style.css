@@ -1402,8 +1402,46 @@ body.menu-open .nav__toggle {
   width: 30px;
 }
 
+/* PROJECTS ITEM COMPONENTS */
+.projects-item__components {
+  margin-top: 1.25rem;
+}
 
+.projects-item__components h4 {
+  padding-bottom: 10px;
+}
 
+.projects-item__techs {
+  display: flex;
+  /* justify-content: space-evenly; */
+  justify-content: space-around;
+}
+
+.projects-item__tech {
+  text-align: center;
+  border: #1249d6 solid 10px;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.projects-item__tech h5 {
+  padding-bottom: 5px;
+  font-size: medium;
+}
+
+.projects-item__tech-list  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-item__tech-list  li{
+  font-size: small;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+}
 
 
 

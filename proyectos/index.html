@@ -87,7 +87,7 @@
         <!-- PROJECT 1 -->
         <article class="projects-item">
           <div class="projects-item__header">
-            <h3>Portafolio Web Personal con CI/CD en Azure</h3>
+            <h3>Portafolio Web Personal en Azure</h3>
           </div>
 
           <h4>Descripción del proyecto</h4>
@@ -96,14 +96,18 @@
             servicios cloud de Azure, integrando control de versiones y automatización de despliegues mediante CI/CD.
           </p>
 
+          <h4>Objetivo</h4>
+
           <p>
-            Desarrollo de un sitio web estático profesional utilizando HTML, CSS y JavaScript, versionado con Git y GitHub, 
+            Diseñar, implementar y desplegar un sitio web estático profesional utilizando HTML, CSS y JavaScript, versionado con Git y GitHub, 
             e integrado a un flujo de CI/CD con GitHub Actions para automatizar el proceso de build y despliegue.<br>
 
             El sitio se encuentra hospedado en Azure Static Web Apps, con dominio personalizado, y utiliza Azure Storage (Blob Storage) 
             para la distribución segura de archivos PDF descargables en español e inglés.
           </p><br>
 
+          <h4>Alcance del proyecto</h4>
+          
           <ul class="projects-item__list">
             <li>Desarrollo de sitio web estático con HTML, CSS y JavaScript.</li>
             <li>Control de versiones y gestión de cambios con Git y GitHub.</li>
@@ -127,6 +131,7 @@
             </div>
         </article>
 
+
         <!-- PROJECT 2 -->
         <article class="projects-item">
           <div class="projects-item__header">
@@ -144,13 +149,8 @@
           <h4>Objetivo</h4>
 
           <p>
-            Construir una topología escalable y robusta que permita:
+            Construir una topología escalable y robusta que permita: Comunicación eficiente entre segmentos de red, Enrutamiento dinámico interno y externo y Control y protección del tráfico hacia Internet
           </p>
-          <ul class="projects-item__list">
-            <li>Comunicación eficiente entre segmentos de red</li>
-            <li>Enrutamiento dinámico interno y externo</li>
-            <li>Control y protección del tráfico hacia Internet</li>
-          </ul>
 
           <div class="projects-item__components">
             <h4>Componentes y tecnologías utilizadas</h4>
@@ -159,7 +159,7 @@
                 <!-- COMPONENT 1 -->
               <div class="projects-item__tech">
                 <h5>Capa de Acceso (L2)</h5>
-                <ul>
+                <ul class="projects-item__tech-list">
                     <li>Cisco Catalyst 2960-X y 2960-S</li>
                     <li>Trunking VLAN y STP</li>
                 </ul>
@@ -168,7 +168,7 @@
               <!-- COMPONENT 2 -->
               <div class="projects-item__tech">
                 <h5>Capa de Distribución / Core (L3)</h5>
-                <ul>
+                <ul class="projects-item__tech-list">
                     <li>Cisco Catalyst 3750-X</li>
                     <li>SVIs y enrutamiento OSPF (Área 0)</li>
                 </ul>
@@ -177,7 +177,7 @@
               <!-- COMPONENT 3 -->
               <div class="projects-item__tech">
                 <h5>Routers</h5>
-                <ul>
+                <ul class="projects-item__tech-list">
                     <li>Cisco 1900 y Cisco 1800</li>
                     <li>OSPF para routing interno</li>
                     <li>BGP para interconexión entre sistemas autónomos</li>
@@ -187,24 +187,33 @@
               <!-- COMPONENT 4 -->
               <div class="projects-item__tech">
                 <h5>Seguridad Perimetral</h5>
-                <ul>
+                <ul class="projects-item__tech-list">
                     <li>Firewall Cisco ASA 5508-X</li>
                     <li>BGP con el core</li>
                     <li>Segmentación Inside / Outside</li>
                     <li>Salida a Internet mediante DHCP</li>
                 </ul>
               </div>
-
             </div>
           </div>
+          <br>
+          <h4>Alcance del proyecto</h4>
+
+          <ul class="projects-item__list">
+            <li>Implementación de OSPF como protocolo de enrutamiento interno.</li>
+            <li>Uso de BGP para interconexión entre routers y firewall, simulando un entorno multi-AS.</li>
+            <li>Firewall ASA actuando como punto de salida a Internet.</li>
+            <li>Diseño modular que facilita escalabilidad y troubleshooting.</li>
+            <li>Laboratorio documentado con configuraciones reales de dispositivos Cisco</li>
+          </ul>
           
           <div class="projects-item__stack">
-            HTML · CSS · JavaScript · Git · GitHub · GitHub Actions · Azure Static Web Apps · Azure Blob Storage · CI/CD · Cloud
+            Networking · Routing · Switching · OSPF · BGP · VLANs · EtherChannel · Cisco Catalyst · Cisco ASA · LAN/WAN · TCP/IP · VRRP · Network Design
           </div>
 
           <div class="projects-link">
             <p>Ver scripts en GitHub</p>
-            <a href="https://github.com/FranciscoEspinosaa/my_website" target="_blank">
+            <a href="https://github.com/FranciscoEspinosaa/enterprise-network-lab" target="_blank">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></g></svg>
             </a>
             </div>
