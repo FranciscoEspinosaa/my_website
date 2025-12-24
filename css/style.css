@@ -1646,6 +1646,11 @@ body.menu-open .nav__toggle {
     display: none;
   }
   
+  .projects-item__techs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
 }
 
 /* Botón de búsqueda */
@@ -1713,6 +1718,7 @@ body.menu-open .nav__toggle {
   .projects-item__techs {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5px;
   }
 }
 
