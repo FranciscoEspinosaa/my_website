@@ -1413,8 +1413,7 @@ body.menu-open .nav__toggle {
 
 .projects-item__techs {
   display: flex;
-  /* justify-content: space-evenly; */
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .projects-item__tech {
