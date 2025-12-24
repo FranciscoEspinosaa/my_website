@@ -1709,6 +1709,11 @@ body.menu-open .nav__toggle {
     max-width: 300px;
     margin: 0 auto;
   }
+
+  .projects-item__techs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
