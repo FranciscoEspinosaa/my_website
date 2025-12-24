@@ -3,7 +3,7 @@
 Personal professional portfolio website designed, developed, and deployed using modern web technologies and Microsoft Azure cloud services.  
 This project demonstrates practical experience in **web development**, **cloud infrastructure**, and **CI/CD automation**.
 
-🌐 Live site: https://www.francisco-espinosa.com
+Live site: https://www.francisco-espinosa.com
 
 ---
 
